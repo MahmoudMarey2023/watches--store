@@ -1,0 +1,484 @@
+body{
+    perspective: 700px;
+    background-color: rgb(223, 221, 221);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.contener{
+    width: 80%;
+    margin: auto;
+}
+.heder{
+    height: 80px;
+    margin: 50px 0px;
+    display: flex;
+    align-items: center;
+}
+.heder .img{
+    width: 20%;
+    height: 80px;
+}
+.img img{
+    width: 70%;
+    height: 80px;
+}
+.ul {
+    width: 60%;
+    font-size: 30px;
+}
+.ul ul{
+    display: flex;
+    justify-content: space-evenly;
+}
+.list a{
+    text-decoration: none;
+    list-style: none;
+    padding: 5px 10px;
+}
+.icon{
+    width: 20%;
+    display: flex;
+    justify-content:flex-end; 
+}
+.icon a{
+    color: black;
+    margin-left:30px ;
+    font-size: 25px;
+}
+.icon a:hover{
+    color: blue;
+}
+.bag{
+    font-size: 25px;
+    position: relative;
+
+}
+.bag .sp1{
+    position: absolute;
+    top: 9px;
+    left: 57px;
+    background-color: rgb(147, 148, 148);
+    border-radius: 50%;
+}
+.bag .sp2{
+    margin: 0px 10px;
+}
+.list-menu{
+    border: 2px solid grey;
+    border-radius: 20px;
+    background-color: rgb(223, 221, 221);
+    font-family:'Times New Roman', Times, serif;
+    color: black;
+    position: absolute;
+    top: 50px;
+    left: -250px;
+    width: 600px;
+    height: 300px;
+    visibility: hidden;
+    opacity: 0;
+    transition: 1s;
+}
+.list a .watch:hover  .list-menu{
+    visibility: visible;
+    opacity: 1;
+}
+
+.menu{
+    list-style: none;
+    column-count: 15px;
+    line-height: 100px;
+}
+.list a{
+    position: relative;
+}
+.list a .ll{
+    color: rgb(29, 28, 28);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.list a .ll:hover{
+    color: blue;
+}
+ .list a .ll::before{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border: 2px solid transparent;
+    bottom: 0;
+    left: 0;
+    box-sizing: border-box;
+    transition: height 0.2s linear;
+}
+ .list a .ll:hover::before{
+    height: 100%;
+    width: 100%;
+    border: 2px solid black;
+    border-top: none;
+    border-bottom: none;
+    transition: height 0.2s linear;
+}
+.list a .ll::after{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border: 2px solid transparent;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    transition: width 0.2s 0.4s linear;
+}
+ .list a .ll:hover::after{
+    height: 100%;
+    width: 100%;
+    padding: 5px;
+    border: 2px solid black;
+    border-left: none;
+    border-right: none;
+    transition: width 0.2s 0.4s linear;
+}
+
+/* /////////////////////////////////// */
+.sec{
+    width: 100%;
+    background-color: rgb(170, 170, 170);
+    display: flex;
+    justify-content: space-around;
+    padding: 100px 0px;
+}
+.titel1{
+    width: 40%;
+    font-size: 60px;
+    margin-top: 200px;
+
+}
+.titel1 button{
+    width: 150px;
+    height: 40px;
+    border-radius: 10px;
+    border: 1px solid gray;
+    font-size: 20px;
+    background-color: rgb(212, 211, 211);
+}
+.titel1 button:hover{
+    opacity: 0.5;
+}
+.img2{
+    width: 40%;
+    height: 600px;
+}
+.img2 img{
+    width: 100%;
+    height: 100%;
+    border-radius: 300px;
+    margin: auto;
+    transform: rotateY(30deg);
+    transition: 1s;
+}
+.img2 img:hover{
+    transform: scale(1.15 , 1.15);
+}
+
+/* -------------------------------------------------- */
+
+.titel2 h2{
+    font-size: 60px;
+    text-align: center;
+    padding: 100px 0px 0px 0px;
+}
+.dash{
+    width: 100px;
+    height: 4px;
+    background-color: black;
+    margin: auto;
+    transition: 1s;
+}
+.titel2:hover  .dash{
+    transform: scale(2 , 1);
+}
+.offers{
+    margin-top:100px ;
+    background-color: rgb(185, 184, 184);
+    display: flex;
+    justify-content: space-between;
+}
+.offer{
+    width: 24%;
+    margin: auto;
+    height: 500px;
+    position: relative;
+}
+.offer img{
+    width: 100%;
+    height: 350px;
+    border-radius: 15px;
+}
+.offer p{
+    font-size: 20px;
+    color: rgb(34, 34, 34);
+    margin-top: 50px;
+}
+.offer h3{
+    font-size: 30px;
+    color: rgb(12, 12, 12);
+}
+.offer .sp3{
+    background-color: rgb(185, 42, 42);
+    text-align: center;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 25px;
+    color: aliceblue;
+    position: absolute;
+    right: 0;
+    bottom: 41px;
+    visibility: hidden;
+}
+.offer:hover .sp3{
+    visibility: visible;
+}
+/* --------------------------------- */
+.information{
+    padding: 50px 0px;
+    display: flex;
+}
+.info{
+    width: 50%;
+    height: 50vh;
+    background-color:rgb(179, 178, 178);
+    margin-top: 50px;
+    padding: 10px 30px;
+}
+.top{
+    position: relative;
+}
+.top i{
+    font-size: 30px;
+    margin-top: 5px;
+}
+.titel3{
+    font-size: 40px;
+    margin-left:45px ;
+    margin-top: -40px;
+}
+.sp4{
+    font-size: 20px;
+    margin-left: 45px;
+}
+.p1{
+    font-size: 25px;
+    margin-top: 50px;
+    text-transform: capitalize;
+}
+.bottom{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 50px;
+}
+.dash5 ,.dash6 ,.dash7{
+    width: 50px;
+    height: 4px;
+    background-color: black;
+}
+.dash6{
+    margin: 0px 20px;
+}
+
+.discount{
+    width: 50%;
+    background-color: rgb(223, 221, 221);
+    display: flex;
+    padding: 30px 30px;
+
+}
+.dis1{
+    width: 48%;
+    height: 500px;
+    background-image: url(../image/ساعه\ خصم.jpg);
+    background-size: cover;
+    margin-right: 4% ;
+    transition: 1s;
+}
+.dis1:hover{
+    transform: scale(1.15 , 1.1);
+}
+.dis2{
+    width: 48%;
+    height: 500px;
+    background-image: url(../image/ساعه\ خصم\ 2.jpg);
+    background-size: cover;
+    transition: 1s;
+}
+.dis2:hover{
+    transform: scale(1.15 , 1.1);
+}
+.sp5{
+    font-size: 25px;
+    color: rgb(241, 241, 241);
+}
+h4{
+    font-size: 30px;
+    color:rgb(148, 147, 147);
+}
+/* //////////////////////////////////////////// */
+
+.services{
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;    
+}
+.item{
+
+    flex-basis: calc(20% - 10px );
+    height: 70px;
+    background-image: url(../image/service-icon.png);
+    background-repeat: no-repeat;
+    transition: all 0.5s ease;
+    border: 2px solid black;
+    border-top: none;
+    border-bottom: none;
+    border-left: none;
+    
+}
+
+.item .div1{
+    text-align: center;
+    margin-top: 70px;
+}
+.item1{
+    background-position: center 10px;
+}
+.item1:hover{
+    background-position: center -90px;
+}
+.item2{
+    background-position: center -180px;
+}
+.item2:hover{
+    background-position: center -270px;
+}
+.item3{
+    background-position: center -360px;
+}
+.item3:hover{
+    background-position: center -450px;
+}
+.item4{
+    background-position: center -545px;
+}
+.item4:hover{
+    background-position: center -635px;
+}
+.item5{
+    background-position: center -730px;
+    border-right: none;
+}
+.item5:hover{
+    background-position: center -820px;
+}
+/* ///////////////////////////////////////////// */
+.titel4{
+    font-size: 60px;
+    margin-top: 100px;
+    text-align: center;
+    margin-top: 200px;
+}
+.dash8{
+    width: 100px;
+    height: 4px;
+    background-color: black;
+    margin: auto;
+    transition: 1s;
+}
+.pro-info{
+    margin: 100px 0px;
+}
+.pro-info:hover  .dash{
+    transform: scale(2, 1);
+}
+.types{
+    display: flex;
+    justify-content: center;
+}
+.types li{
+    margin-left: 40px;
+    font-size: 25px;
+    margin-top: -50px;
+    list-style: none;
+}
+
+.watches1 , .watches2{
+    display: flex;
+    justify-content: space-between;
+}
+.pro1 , .pro2{
+    width: 30%;
+    background-color: rgb(146, 145, 145);
+    perspective: 500px;
+}
+.pro1 img ,.pro2 img{
+    width: 100%;
+    height: 500px;
+    padding: 10px 15px;
+}
+.img-info{
+    padding:0px 15px ;
+}
+.p2 ,.p3{
+    font-size: 25px;
+    
+}
+.d1{
+    position: relative;
+    transition: 0.5s;
+    transform-style: preserve-3d;
+    height: 500px;
+}
+.back ,.front{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.front{
+    z-index: 1;
+    backface-visibility: hidden;
+}
+.front img{
+    width: 100%;
+}
+.back img{
+    width: 100%;
+}
+.back{
+    transform: rotateY(180deg);
+    position: relative;
+}
+.d1:hover{
+    transform: rotateY(180deg);
+}
+.ss{
+    margin-left: 150px;
+}
+.aa{
+    margin: 0px 50px;
+}
+.back a{
+    font-size: 40px;
+    /* text-align: center; */
+    /* margin:0px 50px; */
+    color: aliceblue;
+}
+.back a i{
+    /* margin-left: 50px; */
+    position: absolute;
+    top: 250px;
+}
+.watches2{
+    margin: 100px 0px;
+}
+
